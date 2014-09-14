@@ -1,0 +1,35 @@
+public static String dashInsert(int num)
+    {
+        StringBuilder newNum = new StringBuilder();
+        bool lastIsOdd = false;
+        int lastDigit;
+
+        while (num != 0)
+        {
+            lastDigit = num % 10;
+
+            if (lastIsOdd && (lastDigit % 2 != 0))
+            {
+                newNum.Append('-');
+            }
+
+            newNum.Append(lastDigit);
+            lastIsOdd = (lastDigit % 2 != 0);
+
+            num = num / 10;
+        }
+        
+        return ReverseString(newNum);
+    }
+
+    public static String ReverseString(StringBuilder str)
+    {
+        StringBuilder reversed = new StringBuilder();
+
+        for (int i = str.Length - 1; i >= 0; i--)
+        {
+            reversed.Append(str[i]);   
+        }
+
+        return reversed.ToString();
+    }
