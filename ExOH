@@ -1,0 +1,15 @@
+public static bool EhOh(string name)
+        {
+            int countO = 0;
+
+            for (int i = 0; i < name.Length; i++)
+            {
+                if (name[i] == 'o')
+                    countO++;
+            }
+
+            if (countO == name.Length-countO)
+                return true;
+            else
+                return false;
+        }
