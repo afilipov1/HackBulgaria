@@ -1,0 +1,17 @@
+ public static bool ABCheck(string name)
+        {
+            int countFromAtoB = 0;
+
+            for (int i = 0; i < name.Length; i++)
+            {
+                countFromAtoB++;
+                if (name[i] == 'a')
+                    countFromAtoB = 0;
+
+
+                if (name[i] == 'b' && countFromAtoB == 4)
+                    return true;
+           
+            }
+            return false;
+        }
